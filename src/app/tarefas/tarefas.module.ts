@@ -3,9 +3,14 @@ import { CommonModule } from '@angular/common';
 import { TarefaService } from './model';
 import { ListarComponent } from './listar';
 
+import { RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   declarations: [ListarComponent],
   providers:[
