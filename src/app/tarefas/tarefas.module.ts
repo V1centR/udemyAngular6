@@ -5,6 +5,8 @@ import { ListarComponent } from './listar';
 
 import { RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import { CadastroComponent } from './cadastro';
+
 
 @NgModule({
   imports: [
@@ -12,7 +14,7 @@ import {FormsModule} from '@angular/forms';
     RouterModule,
     FormsModule
   ],
-  declarations: [ListarComponent],
+  declarations: [ListarComponent, CadastroComponent],
   providers:[
   		TarefaService
   ]
