@@ -4,7 +4,7 @@
   	<th>Tarefa</th>
     <th>Concluída</th>
   	<th class="text-center">
-      <a 
+      <a [routerLink]="['/tarefas/cadastro']"
          class="btn btn-success">
          <span class="glyphicon glyphicon-plus" 
            aria-hidden="true"></span> Novo
@@ -19,7 +19,7 @@
       <input type="checkbox" [value]="tarefa.id">
     </td>
     <td class="text-center" style="width: 200px">
-      <a 
+      <a [routerLink]="['/tarefas/editar', tarefa.id]"
         title="Editar" alt="Editar"
         class="btn btn-xs btn-info">
         <span class="glyphicon glyphicon-pencil" 

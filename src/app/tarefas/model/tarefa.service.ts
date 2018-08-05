@@ -15,7 +15,7 @@ export class TarefaService {
 		return tarefas ? JSON.parse(tarefas):[];
 	}
 
-	/*
+	
 
 	cadastrar(tarefa: Tarefa): void{
 
@@ -25,6 +25,7 @@ export class TarefaService {
 		tarefas.push(tarefa);
 		localStorage['tarefas'] = 	JSON.stringify(tarefa);
 	}
+	/*
 
 	buscarPorId(id: number): Tarefa{
 
