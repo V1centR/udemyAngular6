@@ -7,7 +7,7 @@ import { EditarComponent } from './editar';
 
 export const TarefaRoutes: Routes = [
 	
-	{ 
+	{
 		path: 'tarefas/listar', 
 		component: ListarComponent 
 	},

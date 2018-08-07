@@ -13,9 +13,7 @@ export class TarefaService {
 	listarTodos(): Tarefa[]{
 		const tarefas = localStorage['tarefas'];
 		return tarefas ? JSON.parse(tarefas):[];
-	}
-
-	
+	}	
 
 	cadastrar(tarefa: Tarefa): void{
 
@@ -23,18 +21,20 @@ export class TarefaService {
 
 		tarefa.id = new Date().getTime();
 		tarefas.push(tarefa);
-		localStorage['tarefas'] = 	JSON.stringify(tarefa);
+		localStorage['tarefas'] = JSON.stringify(tarefas);
 	}
-	/*
 
-	buscarPorId(id: number): Tarefa{
+	buscarPorId(id: number): Tarefa {
 
-		const tarefas: Tarefa[] = this.listarTodos();
-		return tarefas.find(tarefa => tarefa.id === id);
+    	const tarefas: Tarefa[] = this.listarTodos();
+    	return tarefas.find(tarefa => tarefa.id === id);
+ 
+  	}
 
-	}
 
 	atualizarTarefa(tarefa:Tarefa): void{
+
+		console.log('Entrou atualizarTarefa ::');
 
 		const tarefas: Tarefa[] = this.listarTodos();
 		tarefas.forEach((obj,index,objs) => {
@@ -46,6 +46,7 @@ export class TarefaService {
 
 		localStorage['tarefas'] = JSON.stringify(tarefas);
 	}
+	/*
 
 	remover(id: number): void {
 

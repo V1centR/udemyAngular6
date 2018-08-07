@@ -1,5 +1,5 @@
-<div class="well">
-  <form>
+<div class="well" style="width: 600px;">
+  <form #formTarefa="ngForm">
     <div class="form-group">
       <label for="nome">Tarefa:</label>
       <input 
@@ -7,13 +7,15 @@
         class="form-control"
         id="nome"
         name="nome"
-        minlength="5" 
+        minlength="5"
+        [(ngModel)]="tarefa.nome"
+        #nome="ngModel"
         required> 
-      <div class="alert alert-danger">
-        <div >
+      <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+        <div [hidden]="!nome.errors.required">
           Digite a tarefa.
         </div>
-        <div >
+        <div [hidden]="!nome.errors.minlength">
           A tarefa deve conter ao menos 5 caracteres.
         </div>
       </div>
@@ -22,8 +24,10 @@
       <input 
         type="submit"
         class="btn btn-success"
-        value="Atualizar">
-      <a 
+        value="Atualizar"
+        (click)="atualizar()"
+        [disabled]="!formTarefa.form.valid">
+      <a [routerLink]="['/tarefas']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
