@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import {TarefaService, Tarefa} from '../model';
+import { TarefaService, Tarefa } from '../model';
 
 @Component({
   selector: 'app-cadastro',

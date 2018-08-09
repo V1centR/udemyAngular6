@@ -16,7 +16,8 @@
     	{{tarefa.nome}}
     </td>
     <td style="width: 70px" class="text-center">
-      <input type="checkbox" [value]="tarefa.id">
+      <input type="checkbox" [value]="tarefa.id" [checked]="tarefa.concluida"
+        (click)="updateStatus(tarefa)" >
     </td>
     <td class="text-center" style="width: 200px">
       <a [routerLink]="['/tarefas/editar', tarefa.id]"
@@ -27,7 +28,7 @@
       </a>
 
       <a href="#" title="Remover" alt="Remover" 
-        
+          (click)="remover($event,tarefa)"
         class="btn btn-xs btn-danger">
         <span class="glyphicon glyphicon-remove" 
           aria-hidden="true"></span> Remover
