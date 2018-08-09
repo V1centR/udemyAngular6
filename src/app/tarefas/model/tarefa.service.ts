@@ -9,7 +9,6 @@ export class TarefaService {
 	*/
   constructor() { }
 
-
 	listarTodos(): Tarefa[]{
 		const tarefas = localStorage['tarefas'];
 		return tarefas ? JSON.parse(tarefas):[];
@@ -29,8 +28,7 @@ export class TarefaService {
     	const tarefas: Tarefa[] = this.listarTodos();
     	return tarefas.find(tarefa => tarefa.id === id);
  
-  	}
-
+  	}	
 
 	atualizarTarefa(tarefa:Tarefa): void{
 

@@ -25,6 +25,8 @@ export class CadastroComponent implements OnInit {
 
   cadastrar():void{
 
+   // console.log("nome:: " + this.formTarefa);
+
   	if(this.formTarefa.form.valid){
 
   		this.tarefaService.cadastrar(this.tarefa);

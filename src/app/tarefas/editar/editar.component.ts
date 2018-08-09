@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { TarefaService, Tarefa } from '../model';
+import { TarefaService, Tarefa} from '../model';
 
 @Component({
   selector: 'app-editar',
@@ -11,8 +11,9 @@ import { TarefaService, Tarefa } from '../model';
 export class EditarComponent implements OnInit {
 
 	@ViewChild('formTarefa') formTarefa: NgForm;
-	tarefa: Tarefa;
-
+	
+  tarefa: Tarefa;
+  
   	constructor(
   		private tarefaService: TarefaService,
   		private route: ActivatedRoute,
